@@ -10,6 +10,8 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
+gem 'bootstrap-sass', '~> 3.3.1.0'
+gem 'autoprefixer-rails', '~> 4.0.2.2'
 gem 'slim-rails', '~> 3.0.1'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
@@ -26,6 +28,7 @@ group :development, :test do
   gem 'quiet_assets', '~> 1.1.0'
   gem 'thin', '~> 1.6.3'
   gem 'factory_girl_rails', '~> 4.5.0'
+  gem 'annotate', '~> 2.6.5'
 end
 
 group :test do

@@ -22,5 +22,19 @@ module Webmail
 
     config.generators.stylesheets = false
     config.generators.javascripts = false
+
+    config.generators do |g|
+      g.orm             :active_record
+      g.template_engine :slim
+      g.test_framework :rspec, fixtures: true,
+                               view_specs: false,
+                               helper_specs: false,
+                               routing_specs: false,
+                               controller_specs: true,
+                               request_specs: true
+
+      g.assets false
+      g.helper false
+    end
   end
 end
