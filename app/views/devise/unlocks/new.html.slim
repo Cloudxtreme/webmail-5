@@ -1,0 +1,10 @@
+= device_form 'Resend unlock instructions' do
+  = simple_form_for resource, :as => resource_name, \
+                              :url => unlock_path(resource_name), \
+                              :html => { class: 'form-horizontal', method: :post }, \
+                              :wrapper => :horizontal_form do |f|
+    = f.input :email
+    = horizontal_form_buttons do
+      = f.submit 'Resend unlock instructions', :class => 'btn btn-default btn-primary'
+
+  = render 'devise/shared/links'

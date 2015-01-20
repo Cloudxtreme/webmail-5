@@ -1,0 +1,10 @@
+= device_form 'Forgot your password?' do
+  = simple_form_for resource, :as => resource_name, \
+                              :url => password_path(resource_name), \
+                              :html => { class: 'form-horizontal', method: :post }, \
+                              :wrapper => :horizontal_form do |f|
+    = f.input :email
+    = horizontal_form_buttons do
+      = f.submit 'Send me reset password instructions', :class => 'btn btn-default btn-primary'
+
+  = render 'devise/shared/links'

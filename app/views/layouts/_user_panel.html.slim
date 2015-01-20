@@ -1,0 +1,15 @@
+ul.nav.navbar-nav.navbar-right
+  - if user_signed_in?
+    li.dropdown
+      a href="#" role="button" data-toggle="dropdown" aria-expanded="false" id="user_menu_button"
+        span class="glyphicon glyphicon-user" aria-hidden="true"
+        = " #{current_user.email} "
+        span.caret
+      ul.dropdown-menu role="menu" aria-labelledby="user_menu_button"
+        li role="presentation"
+          = link_to 'Edit account', edit_user_registration_path, :tabindex => '-1'
+        li role="presentation"
+          = link_to 'Sign out', destroy_user_session_path, :method => :delete, :tabindex => '-1'
+  - else
+    li
+      = link_to 'Sign in', user_session_path

@@ -1,0 +1,12 @@
+nav.navbar.navbar-inverse.navbar-fixed-top
+  .container-fluid
+    .navbar-header
+      button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar_body"
+        span class="sr-only" Toggle navigation
+        span class="icon-bar"
+        span class="icon-bar"
+        span class="icon-bar"
+      = link_to 'Webmail', root_path, :class => 'navbar-brand'
+
+    #navbar_body.collapse.navbar-collapse
+      = render 'layouts/user_panel'

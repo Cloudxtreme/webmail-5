@@ -7,9 +7,9 @@ head
   = javascript_include_tag 'application'
   = csrf_meta_tags
 body
-  .flash
-    p class="notice"
-      = notice
-    p class="alert"
-      = alert
-  = yield
+  = render 'layouts/navigation'
+  .container-fluid
+    .row
+      section#content
+        = render 'layouts/notifications'
+        = yield

@@ -11,8 +11,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 3.3.1.0'
+gem 'bootstrap_notify', '~> 0.0.3'
 gem 'autoprefixer-rails', '~> 4.0.2.2'
+
 gem 'slim-rails', '~> 3.0.1'
+gem 'simple_form', '~> 3.1.0'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 

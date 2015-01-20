@@ -1,0 +1,10 @@
+= device_form 'Resend confirmation instructions' do
+  = simple_form_for resource, :as => resource_name, \
+                              :url => confirmation_path(resource_name), \
+                              :html => {class: 'form-horizontal', method: :post}, \
+                              :wrapper => :horizontal_form do |f|
+    = f.input :email
+    = horizontal_form_buttons do
+      = f.submit 'Resend confirmation instructions', :class => 'btn btn-default btn-primary'
+
+  = render 'devise/shared/links'
